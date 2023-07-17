@@ -96,7 +96,6 @@ jobs:
 
     frontend_tests:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up nodeJS
@@ -117,6 +116,7 @@ jobs:
       run: |
         cd frontend/
         npm run test
+
   build_frontend_and_push_to_docker_hub:
     name: Push frontend Docker image to DockerHub
     runs-on: ubuntu-latest
